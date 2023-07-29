@@ -221,6 +221,10 @@ slice calculate_nft_item_address(cell state_init) {
         return 0;
     }
 
+    ifnot (cs.slice_hash() == nft_data.cell_hash()) {
+        return 0;
+    }
+
     return 1;
 }
 
